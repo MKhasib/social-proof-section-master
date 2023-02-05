@@ -1,105 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-body{
-  background-image:url("images/bg-pattern-top-desktop.svg") ,url("images/bg-pattern-bottom-desktop.svg"); 
-  background-position: left top,right bottom;
-  background-repeat: no-repeat;
+body {
+	background-image: url("images/bg-pattern-top-desktop.svg"),
+		url("images/bg-pattern-bottom-desktop.svg");
+	background-position: left top, right bottom;
+	background-repeat: no-repeat;
 }
 :root {
-  --max-width-desktop: 1440px;
-  --max-width-mobilde: 375px;
+	--max-width-desktop: 1440px;
+	--max-width-mobilde: 375px;
 
-  --clr-primary-400: hsl(300, 43%, 22%);
-  --clr-primary-600: hsl(333, 80%, 67%);
+	--clr-primary-400: hsl(300, 43%, 22%);
+	--clr-primary-600: hsl(333, 80%, 67%);
 
-  --clr-secondary-400: hsl(303, 10%, 53%);
-  --clr-secondary-600: hsl(300, 24%, 96%);
-  --clr-light: hsl(0, 0%, 100%);
+	--clr-secondary-400: hsl(303, 10%, 53%);
+	--clr-secondary-600: hsl(300, 24%, 96%);
+	--clr-light: hsl(0, 0%, 100%);
 
-  --fs-body: 15px;
-  --ff-primary: "League Spartan";
+	--fs-body: 15px;
+	--ff-primary: "League Spartan";
 
-  --fw-regular: 400;
-  --fw-bold: 500;
-  --fw-bolder: 700;
+	--fw-regular: 400;
+	--fw-bold: 500;
+	--fw-bolder: 700;
 }
-.container{
-  display: flex;
-  flex-direction: column;
-  margin: 2em 1em; 
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 2em 1em;
 }
-.section1{
-  display: flex;
-  flex-direction: column;
-  gap:2em;
-  justify-content:space-between;
-  align-items: center;
+.section1 {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	justify-content: space-between;
+	align-items: center;
 }
-.section1__info{
-  flex-grow:1;
-  flex-basis:30%;
-  text-align: center;
-}
-
-.section1__info h1{
-  font-weight: bold;
-  line-height:.8;
-  margin: 1em .5em;
-  color: var(--clr-primary-400);
-}
-.section1__details{
-  line-height: 1.2;
-  color: var(--clr-secondary-400);
-  font-weight: 500;
-}
-.star{
-  background-image:url("images/icon-star.svg") ;
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 1rem; 
-  height: 1rem; 
+.section1__info {
+	flex-grow: 1;
+	flex-basis: 30%;
+	text-align: center;
 }
 
-.review--card{
-  background-color: var(--clr-secondary-600);
-  padding: 1em 2em;
-  margin: 1em;
-  border-radius: 5px;
-  text-align: center;
-  color: var(--clr-primary-400);
-  font-weight: var(--fw-bolder);
+.section1__info h1 {
+	font-weight: bold;
+	line-height: 0.8;
+	margin: 1em 0.5em;
+	color: var(--clr-primary-400);
 }
-.testimonial{
-  background-color: var(--clr-primary-400);
-  padding: 1em 2em;
-  margin: 1em;
-  border-radius: 8px;
-  color: white;
+.section1__details {
+	line-height: 1.2;
+	color: var(--clr-secondary-400);
+	font-weight: 500;
 }
-.testimonial__container{
-display: flex;
-flex-direction: column;
-gap: 1em;
+.star {
+	background-image: url("images/icon-star.svg");
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
 }
-.testimonial__author--info{
-  display: flex;
-  gap: 1em;
 
+.review--card {
+	background-color: var(--clr-secondary-600);
+	padding: 1em 2em;
+	margin: 1em;
+	border-radius: 5px;
+	text-align: center;
+	color: var(--clr-primary-400);
+	font-weight: var(--fw-bolder);
 }
-.avatar{
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+.testimonial {
+	background-color: var(--clr-primary-400);
+	padding: 1em 2em;
+	margin: 1em;
+	border-radius: 8px;
+	color: white;
 }
-.testimonial__author{
-
+.testimonial__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 }
-.testimonial__type{
-  color: var(--clr-primary-600);
-  font-weight: var(--fw-bold);
+.testimonial__author--info {
+	display: flex;
+	gap: 1em;
+}
+.avatar {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+}
+.testimonial__type {
+	color: var(--clr-primary-600);
+	font-weight: var(--fw-bold);
+}
+.section2 {
+	width: 100%;
+}
+@media screen and (min-width: 600px) {
+	.section1 {
+		flex-direction: row;
+	}
+	.section2 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.section2 > .testimonial {
+		flex-basis: 30%;
+	}
+	.flex-item-1 {
+		align-self: flex-start;
+	}
+	.flex-item-2 {
+		align-self: center;
+	}
+	.flex-item-3 {
+		align-self: flex-end;
+	}
 }
